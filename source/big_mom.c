@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   big_mom.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:02:51 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:02:52 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 12:30:32 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-static int	get_bit(t_stk * stk)
+static int	get_bit(t_stk *stk)
 {
-	t_node *temp;
+	t_node	*temp;
 	size_t	max;
 	int		max_bits;
 
@@ -32,13 +32,13 @@ static int	get_bit(t_stk * stk)
 	return (max_bits);
 }
 
-void	big_mom(t_stk * stk_a, t_stk * stk_b)
+void	big_mom(t_stk *stk_a, t_stk *stk_b)
 {
-	t_node * temp;
-	int i;
-	int j;
-	int	max_bits;
-	int 	size;
+	t_node	*temp;
+	int		i;
+	int		j;
+	int		max_bits;
+	int		size;
 
 	i = 0;
 	temp = stk_a->top;

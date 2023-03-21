@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   validate.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:03:54 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:03:55 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 11:04:25 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef VALIDATE_H
-#define VALIDATE_H
+# define VALIDATE_H
 
-void	arg_validator(int ac, char * av[]);
+void	arg_validator(int ac, char *av[]);
 
 #endif
-

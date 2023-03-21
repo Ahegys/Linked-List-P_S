@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   extended.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:03:14 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:03:15 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 11:04:19 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-long long ft_atol(const char * str);
+long long	ft_atol(const char *str);
 
-static	int	is_space(const char str)
+static int	is_space(const char str)
 {
 	if (str == ' ' || str == '\n' || str == '\t')
 		return (1);
@@ -23,11 +23,11 @@ static	int	is_space(const char str)
 	return (0);
 }
 
-long long ft_atoll(const char * str)
+long long	ft_atoll(const char *str)
 {
 	size_t	i;
 	size_t	result;
-	int			flag;
+	int		flag;
 
 	i = 0;
 	result = 0;

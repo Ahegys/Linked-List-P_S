@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   big_mom.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:04:23 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:04:25 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 11:05:23 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BIG_MOM_H
-#define BIG_MOM_H
+# define BIG_MOM_H
 
-#include "./structs.h"
+# include "./structs.h"
 
-void	big_mom(t_stk * stk_a, t_stk * stk_b);
+void	big_mom(t_stk *stk_a, t_stk *stk_b);
 
 #endif

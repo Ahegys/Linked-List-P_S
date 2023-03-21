@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   radix_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:03:27 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:10:36 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 11:03:46 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-void	transform_index(t_stk * stk)
+void	transform_index(t_stk *stk)
 {
-	t_node * bucket;
-	t_node * temp;
+	t_node	*bucket;
+	t_node	*temp;
 
 	temp = stk->top;
 	while (temp)
@@ -31,7 +31,7 @@ void	transform_index(t_stk * stk)
 	}
 }
 
-void	parse(int ac, char * av[],	t_stk * stk)
+void	parse(int ac, char *av[], t_stk *stk)
 {
 	int		i;
 	int		each_arg;
@@ -45,7 +45,7 @@ void	parse(int ac, char * av[],	t_stk * stk)
 		temp = splited;
 		while (*splited)
 		{
-			each_arg = ft_atoi(*splited);
+			each_arg = ft_atoi(*temp);
 			fill_stack(stk, each_arg);
 			free(*splited);
 			splited++;

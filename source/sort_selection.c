@@ -3,29 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   sort_selection.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:02:48 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:03:33 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 12:36:20 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-static void	two_num(t_stk * stk)
+static void	two_num(t_stk *stk)
 {
 	if (stk->size != 2)
-		error();
+		error(stk);
 	if (stk->top->i > stk->bottom->i)
-		sa	(stk, 1);
+		sa(stk, 1);
 }
 
-static void three_num(t_stk * stk)
+static void	three_num(t_stk *stk)
 {
-	int num;
+	int	num;
 
 	if (stk->size != 3)
-		error();
+		error(stk);
 	num = indentfy(stk);
 	if (num == 1)
 		sa(stk, 1);
@@ -45,19 +45,19 @@ static void three_num(t_stk * stk)
 		rra(stk, 1);
 }
 
-static void four_num(t_stk * stk_a, t_stk * stk_b)
+static void	four_num(t_stk *stk_a, t_stk *stk_b)
 {
 	if (stk_a->size != 4)
-		error();
+		error(stk_a);
 	pb_lowest(stk_a, stk_b);
 	three_num(stk_a);
 	pa(stk_a, stk_b, 1);
 }
 
-static void five_num(t_stk * stk_a, t_stk * stk_b)
+static void	five_num(t_stk *stk_a, t_stk *stk_b)
 {
 	if (stk_a->size != 5)
-		error();
+		error(stk_a);
 	pb_lowest(stk_a, stk_b);
 	pb_second_lowest(stk_a, stk_b);
 	three_num(stk_a);
@@ -65,7 +65,7 @@ static void five_num(t_stk * stk_a, t_stk * stk_b)
 	pa(stk_a, stk_b, 1);
 }
 
-void	under_five(t_stk * stk_a, t_stk * stk_b)
+void	under_five(t_stk *stk_a, t_stk *stk_b)
 {
 	if (stk_a->size == 2)
 		return (two_num(stk_a));

@@ -3,24 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   moves_b.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afelipe- < afelipe-@student.42sp.org.br    +#+  +:+       +#+        */
+/*   By: afelipe- <afelipe-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 06:02:49 by afelipe-          #+#    #+#             */
-/*   Updated: 2023/03/21 06:03:21 by afelipe-         ###   ########.fr       */
+/*   Updated: 2023/03/21 12:35:27 by afelipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../header/push_swap.h"
 
-
-void	sb(t_stk * stk, int print)
+void	sb(t_stk *stk, int print)
 {
-	t_node * curr;
-	t_node * next;
-	t_node * third;
+	t_node	*curr;
+	t_node	*next;
+	t_node	*third;
 
 	if (stk->top == NULL || stk->top->next == NULL)
-		return;
+		return ;
 	curr = stk->top;
 	next = stk->top->next;
 	third = stk->top->next->next;
@@ -35,24 +34,24 @@ void	sb(t_stk * stk, int print)
 		ft_printf("sb\n");
 }
 
-void	pb(t_stk * stk_b, t_stk * stk_a, int print)
+void	pb(t_stk *stk_b, t_stk *stk_a, int print)
 {
-	t_node *temp;
+	t_node	*temp;
 
 	if (stk_a->size == 0)
-		return;
+		return ;
 	temp = pop(stk_a);
 	push(stk_b, temp);
 	if (print)
 		ft_printf("pb\n");
 }
 
-void	rb(t_stk * stk, int print)
+void	rb(t_stk *stk, int print)
 {
-	t_node * temp;
+	t_node	*temp;
 
 	if (stk->size <= 1)
-		return;
+		return ;
 	temp = stk->top;
 	temp->prev = last_node(stk);
 	temp->next = NULL;
@@ -65,13 +64,13 @@ void	rb(t_stk * stk, int print)
 		ft_printf("rb\n");
 }
 
-void	rrb(t_stk * stk, int print)
+void	rrb(t_stk *stk, int print)
 {
-	t_node * temp;
-	t_node * prev;
+	t_node	*temp;
+	t_node	*prev;
 
 	if (stk->size <= 1)
-		return;
+		return ;
 	temp = stk->bottom;
 	prev = stk->bottom->prev;
 	temp->next = stk->top;
