@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "push_swap.h": "c",
+    "radix_utils.h": "c",
+    "both_moves.h": "c",
+    "big_mom.h": "c"
+  }
+}
